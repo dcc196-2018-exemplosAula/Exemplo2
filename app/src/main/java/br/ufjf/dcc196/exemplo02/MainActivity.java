@@ -9,6 +9,7 @@ import android.widget.EditText;
 
 
 public class MainActivity extends AppCompatActivity {
+    public static final String pessoa_nome = "nome";
     private Button btnProfessor;
     private EditText edtNome;
     @Override
@@ -23,7 +24,7 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View v) {
                 Intent intent = new Intent(MainActivity.this, ProfessorActivity.class);
 
-                intent.putExtra("nome", edtNome.getText().toString());
+                intent.putExtra(pessoa_nome, edtNome.getText().toString());
                 startActivity(intent);
 
             }
